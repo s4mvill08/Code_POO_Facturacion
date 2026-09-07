@@ -4,11 +4,11 @@ Repositorio de código de facturación/Tienda
 # Información detallada
 El presente proyecto busca dar solución a una problemática que sucede en muchos entornos de los negocios que se manejan hoy en día, procesos manuales que no permiten una buena facturación de sus tiendas, manejando la facturación manual, que lleva a los siguientes inconvenientes:
 
-•	Errores en el cálculo de totales
-•	Falta de control sobre el inventario
-•	Dificultad para llevar un registro ordenado de las ventas
-•	Falta de flexibilidad en los medios de pago
-•	Ausencia de un sistema que diferencie automáticamente a los clientes.
+•	Errores en el cálculo de totales 
+•	Falta de control sobre el inventario 
+•	Dificultad para llevar un registro ordenado de las ventas 
+•	Falta de flexibilidad en los medios de pago 
+•	Ausencia de un sistema que diferencie automáticamente a los clientes. 
 
 Ante esta problemática, se plantea el desarrollo de un sistema de facturación que permita gestionar productos, clientes, ventas y pagos de manera organizada, aplicando los principios de la Programación Orientada a Objetos. El sistema debe permitir:
 
