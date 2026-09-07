@@ -1,2 +1,2 @@
-# Code_POO_Facturaci-n
+# Code_POO_Facturación
 Repositorio de código de facturación/Tienda
