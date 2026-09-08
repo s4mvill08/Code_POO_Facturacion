@@ -46,3 +46,6 @@ Este será el archivo principal del programa, desde donde se ejecuta todo. Aquí
 
 # Interfaz realizada en stitch
 https://stitch.withgoogle.com/projects/6516480223404992611
+
+# Agregar un modulo de inventario en el cual se pueda manejar de mejor forma los clientes. 
+
