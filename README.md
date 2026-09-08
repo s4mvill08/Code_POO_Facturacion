@@ -42,3 +42,7 @@ Contendrá la clase Factura, encargada de unir toda la información de una venta
 Archivo: main.py
 
 Este será el archivo principal del programa, desde donde se ejecuta todo. Aquí se crearán los productos disponibles, se registrará un cliente, se elegirá un medio de pago y se generará la factura final, mostrando en pantalla el resultado. Este archivo no contendrá lógica de negocio propia, solo se encargará de conectar y poner en marcha las demás clases.
+
+
+#Interfaz realizada en stitch
+https://stitch.withgoogle.com/projects/6516480223404992611
