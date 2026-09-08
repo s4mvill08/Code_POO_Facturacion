@@ -2,7 +2,7 @@ class Producto:
     def __init__(self, codigo: str, nombre: str, precio: float, cantidad: int):
         self.__codigo: str = codigo
         self.__nombre: str = nombre
-        self.__precio: float = precio
+        self.precio: float = precio
         self.cantidad: int = cantidad
         
     def get_codigo(self) -> str:
@@ -10,9 +10,6 @@ class Producto:
 
     def get_nombre(self) -> str:
         return self.__nombre
-
-    def get_precio(self) -> float:
-        return self.__precio
     
     def set_precio(self, precio: float):
         if precio >= 0:
