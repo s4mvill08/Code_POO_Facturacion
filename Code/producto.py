@@ -4,19 +4,13 @@ class Producto:
         self.__nombre: str = nombre
         self.precio: float = precio
         self.cantidad: int = cantidad
-        
+
     def get_codigo(self) -> str:
         return self.__codigo
 
     def get_nombre(self) -> str:
         return self.__nombre
-    
-    def set_precio(self, precio: float):
-        if precio >= 0:
-            self.__precio = precio
-        else:
-            print("El precio no puede ser negativo")
-            
+
     def cantidad_disponible(self, cantidad_solicitada):
         return self.cantidad >= cantidad_solicitada
 
