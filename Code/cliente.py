@@ -1,22 +1,25 @@
 class Cliente:
-    def __init__(self, nombre: str, tipo_cliente: str):
-        self.__nombre: str = nombre
-        self.__tipo_cliente: str = tipo_cliente
-        
-    def get_nombre(self) -> str:
+    DESCUENTOS = {"regular": 0.0, "vip": 0.10}
+
+    def __init__(self, documento, nombre, tipo="regular"):
+        tipo = tipo.lower()
+        if tipo not in Cliente.DESCUENTOS:
+            raise ValueError("El tipo de cliente debe ser 'regular' o 'vip'.")
+        self.__documento = documento
+        self.__nombre = nombre
+        self.__tipo = tipo
+
+    @property
+    def documento(self):
+        return self.__documento
+
+    @property
+    def nombre(self):
         return self.__nombre
-    
-    def get_tipo_cliente(self) -> str:
-        return self.__tipo_cliente
-    
-    def set_tipo_cliente(self, tipo_cliente: str):
-        if tipo_cliente == "regular" or tipo_cliente == "vip":
-            self.__tipo_cliente = tipo_cliente
-        else:
-            print("Tipo de cliente no válido")
-            
-    def obtener_descuento(self) -> float:
-        if self.__tipo_cliente == "vip":
-            return 0.15
-        else:
-            return 0.0
+
+    @property
+    def tipo(self):
+        return self.__tipo
+
+    def calcular_descuento(self):
+        return Cliente.DESCUENTOS[self.__tipo]
