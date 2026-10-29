@@ -86,5 +86,4 @@ Es el archivo principal del programa, desde donde se ejecuta todo. Aquí se regi
 
 ## Interfaz
 
-Diseño de la interfaz realizado en Stitch:
-https://stitch.withgoogle.com/projects/6516480223404992611
+El programa se ejecuta actualmente por consola mediante `main.py`.
