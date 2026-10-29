@@ -46,7 +46,6 @@ class Factura:
         return self.calcular_subtotal() - self.calcular_descuento()
 
     def cerrar_venta(self):
-        """Cobra y, solo si el pago se aprueba, descuenta el stock."""
         if not self.__items:
             raise ValueError("La factura no tiene productos.")
         if self.__pagada:
