@@ -4,7 +4,6 @@ class PrecioInvalidoError(Exception):
 class CantidadInvalidaError(Exception):
     pass
 
-
 class StockInsuficienteError(Exception):
     pass
 
