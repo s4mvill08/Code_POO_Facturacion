@@ -67,8 +67,4 @@ class Inventario:
         lineas.append(f"Clientes registrados: {len(self.__clientes)} "
                       f"(VIP: {len(self.clientes_por_tipo('vip'))}, "
                       f"Regular: {len(self.clientes_por_tipo('regular'))})")
-<<<<<<< HEAD
         return "\n".join(lineas)
-=======
-        return "\n".join(lineas)
->>>>>>> ec20e549281aa0211b3a5203ef7fbece3133ad0a
