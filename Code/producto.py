@@ -8,17 +8,16 @@ class CantidadInvalidaError(Exception):
 class StockInsuficienteError(Exception):
     pass
 
-
 class Producto:
-    def __init__(self, codigo, nombre, precio, stock):
+    def __init__(self, codigo: str, nombre: str, precio: float, stock: int):
         if precio < 0:
             raise PrecioInvalidoError("El precio no puede ser negativo.")
         if stock < 0:
             raise CantidadInvalidaError("El stock inicial no puede ser negativo.")
-        self.__codigo = codigo
-        self.__nombre = nombre
-        self.__precio = precio
-        self.__stock = stock
+        self.__codigo: str = codigo
+        self.__nombre: str = nombre
+        self.__precio: float = precio
+        self.__stock: int = stock
         
     @property
     def codigo(self):
