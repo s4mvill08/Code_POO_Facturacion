@@ -1,21 +1,55 @@
-class Producto:
-    def __init__(self, codigo: str, nombre: str, precio: float, cantidad: int):
-        self.__codigo: str = codigo
-        self.__nombre: str = nombre
-        self.precio: float = precio
-        self.cantidad: int = cantidad
+class PrecioInvalidoError(Exception):
+    pass
 
-    def get_codigo(self) -> str:
+class CantidadInvalidaError(Exception):
+    pass
+
+
+class StockInsuficienteError(Exception):
+    pass
+
+
+class Producto:
+    def __init__(self, codigo, nombre, precio, stock):
+        if precio < 0:
+            raise PrecioInvalidoError("El precio no puede ser negativo.")
+        if stock < 0:
+            raise CantidadInvalidaError("El stock inicial no puede ser negativo.")
+        self.__codigo = codigo
+        self.__nombre = nombre
+        self.__precio = precio
+        self.__stock = stock
+        
+    @property
+    def codigo(self):
         return self.__codigo
 
-    def get_nombre(self) -> str:
+    @property
+    def nombre(self):
         return self.__nombre
 
-    def cantidad_disponible(self, cantidad_solicitada):
-        return self.cantidad >= cantidad_solicitada
+    @property
+    def precio(self):
+        return self.__precio
 
-    def reducir_cantidad(self, cantidad_solicitada):
-        if self.cantidad_disponible(cantidad_solicitada):
-            self.cantidad -= cantidad_solicitada
-        else:
-            print("Cantidad insuficiente")
+    @property
+    def stock(self):
+        return self.__stock
+
+    def hay_stock(self, cantidad):
+        return cantidad <= self.__stock
+
+    def reducir_stock(self, cantidad):
+        if cantidad <= 0:
+            raise CantidadInvalidaError("La cantidad debe ser mayor que cero.")
+        if not self.hay_stock(cantidad):
+            raise StockInsuficienteError(
+                f"Stock insuficiente de '{self.__nombre}': "
+                f"pedido {cantidad}, disponible {self.__stock}."
+            )
+        self.__stock -= cantidad
+
+    def aumentar_stock(self, cantidad):
+        if cantidad <= 0:
+            raise CantidadInvalidaError("La cantidad debe ser mayor que cero.")
+        self.__stock += cantidad
